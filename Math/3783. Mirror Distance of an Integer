@@ -1,0 +1,20 @@
+class Solution {
+    static int reverse(int n){
+        if(Math.abs(n) < 10)  return n;
+        int sign = 1;
+        if(n < 0){
+            sign *= -1;
+            n *= -1;
+        }
+        int rev = 0;
+        while(n != 0){
+            int d = n%10;
+            rev = rev*10 + d;
+            n = n/10;
+        }
+        return sign*rev;
+    }
+    public int mirrorDistance(int n) {
+        return Math.abs(n - reverse(n));
+    }
+}
