@@ -7,7 +7,7 @@ class Solution {
         for (int c1 = 0; c1 < n; c1++) {
             for (int c2 = c1; c2 < n; c2++) {
                 HashMap<Integer, Integer> map = new HashMap<>();
-                map.put(0, 1);
+                
                 int sum = 0;
                 for (int r = 0; r < m; r++) {
                     sum += matrix[r][c2];
